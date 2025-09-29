@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Friends</h3>
+                <button id="addFriendBtn">Add Friend</button>
+            </div>
+            <div class="friends-list" id="friendsList"></div>
+            <div class="friend-requests">
+                <h4>Friend Requests</h4>
+                <div id="friendRequests"></div>
+            </div>
+            <div class="all-users">
+                <h4>All Users</h4>
+                <div id="allUsers"></div>
+            </div>
+        </div>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2 id="chatTitle">Select a friend to chat</h2>
+                <div class="header-right">
+                    <span id="username"></span>
+                    <button id="logoutBtn">Logout</button>
+                </div>
+            </div>
+            <div class="messages" id="messages"></div>
+            <div class="message-input" id="messageInputContainer" style="display: none;">
+                <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off">
+                <button id="sendButton">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/socket.io-client@4.0.0/dist/socket.io.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
